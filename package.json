@@ -1,6 +1,6 @@
 {
   "name": "bloomqr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "BloomQR — 3D QR Code Generator",
   "private": true,
   "scripts": {
