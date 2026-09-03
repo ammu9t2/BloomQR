@@ -214,4 +214,31 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 350);
     }
   });
+
+  // 3. Open on Vercel Web button
+  const webBtn = document.getElementById('open-web-btn');
+  if (webBtn) {
+    webBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      // Get current URL or input value
+      const inputEl = document.querySelector('input[placeholder]');
+      let targetUrl = 'https://bloomqr.vercel.app';
+      
+      // If we have an active hash or query in history or input
+      if (window.location.search && window.location.search.includes('q=')) {
+        targetUrl += window.location.search;
+      } else if (inputEl && inputEl.value && inputEl.value.trim()) {
+        try {
+          // If app has current encoded state in copy link
+          const copyBtn = document.querySelector('button[title*="Copy" i], button[aria-label*="Copy" i]');
+        } catch(e) {}
+      }
+
+      if (typeof chrome !== 'undefined' && chrome.tabs && chrome.tabs.create) {
+        chrome.tabs.create({ url: targetUrl });
+      } else {
+        window.open(targetUrl, '_blank');
+      }
+    });
+  }
 });
