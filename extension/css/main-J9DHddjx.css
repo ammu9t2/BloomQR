@@ -1,0 +1,24 @@
+:root {
+    --app-bg: #f6f1e7;
+}
+
+html.dark-theme, body.dark-theme {
+    --app-bg: #141312;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+html,body,#root {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--app-bg, #f6f1e7);
+    width: 100%;
+    height: 100%;
+    font-family: system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,sans-serif;
+    overflow: hidden;
+    transition: background 0.35s ease;
+}

@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "BloomQR — 3D QR Code Generator",
+  "version": "1.0.0",
+  "description": "Turn any link into a stunning living 3D tree that doubles as a scannable QR code. Pick seasons, colors, and share.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
+    },
+    "default_title": "BloomQR — 3D QR Generator"
+  },
+  "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "48": "images/icon-48.png",
+    "128": "images/icon-128.png"
+  },
+  "permissions": [
+    "activeTab"
+  ]
+}
