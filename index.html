@@ -61,11 +61,9 @@
         };
         window.Audio.prototype = _OrigAudio.prototype;
 
-        // Reset default URL from icqr.com to https://txerv.com/
+        // Only clean up legacy icqr if present
         try {
-          sessionStorage.clear();
-          localStorage.clear();
-          if (window.location.search && (window.location.search.includes('q=') || window.location.search.includes('icqr'))) {
+          if (window.location.search && window.location.search.includes('icqr')) {
             window.history.replaceState(null, '', window.location.pathname);
           }
         } catch(e) {}
@@ -122,8 +120,8 @@
     <link rel="shortcut icon" href="images/logo-for-all.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
     <link rel="manifest" href="site.webmanifest">
-    <script type="module" src="js/app-v3.js?v=20260903-8"></script>
-    <link rel="stylesheet" crossorigin="" href="css/main-J9DHddjx.css?v=20260903-8">
+    <script type="module" src="js/app-v3.js?v=20260903-9"></script>
+    <link rel="stylesheet" crossorigin="" href="css/main-J9DHddjx.css?v=20260903-9">
     <style>
       a[href*="icqr.com"] {
         display: none !important;

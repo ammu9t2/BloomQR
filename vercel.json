@@ -6,10 +6,6 @@
     {
       "source": "/s/:path*",
       "destination": "/index.html"
-    },
-    {
-      "source": "/((?!assets|images|js|css|favicon|.*\\..*).*)",
-      "destination": "/index.html"
     }
   ],
   "headers": [
@@ -27,7 +23,7 @@
       ]
     },
     {
-      "source": "/(assets|images|js|css)/(.*)",
+      "source": "/(assets|images|js|css|favicon)/(.*)",
       "headers": [
         {
           "key": "Cache-Control",
