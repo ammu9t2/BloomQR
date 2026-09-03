@@ -6,6 +6,10 @@
     {
       "source": "/s/:path*",
       "destination": "/index.html"
+    },
+    {
+      "source": "/((?!assets|images|js|css|favicon|.*\\..*).*)",
+      "destination": "/index.html"
     }
   ],
   "headers": [
